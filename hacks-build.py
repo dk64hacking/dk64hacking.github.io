@@ -97,7 +97,7 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                     page.write(getHackInfoHTML("Type", hack_data.get("hack_type", "not provided").title()))
                     # URL
                     if "github" in hack_data:
-                        page.write(getHackInfoHTML("Source Code", f"<a href=\"{hack_data['github']}\">Link</a>"))
+                        page.write(getHackInfoHTML("Source Code", f"<a href=\"{fileRefToURL(hack_data['github'], hack)}\">Link</a>"))
                     # Tag Anywhere
                     page.write(getHackInfoHTML("Tag Anywhere", "Enabled" if hack_data.get("tag_anywhere", False) else "Disabled"))
                     # Download

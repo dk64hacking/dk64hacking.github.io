@@ -40,5 +40,11 @@
         "hack_name": "Tag Anywhere",
         "image": "./hack-data/tag-anywhere/beavers.png",
         "description": "Use D-Pad Left/Right to instantly tag to the previous/next Kong in the rotation."
+    },
+    {
+        "hack_short": "vc-isles-tns",
+        "hack_name": "VC Isles T&S",
+        "image": "./hack-data/vc-isles-tns/vc-ts.png",
+        "description": "Wii U VC Isles T&S behavior, on not VC."
     }
 ]
