@@ -1,0 +1,24 @@
+{
+    "name": "Kiosk Restoration Project",
+    "complete": false,
+    "hack_type": "utility",
+    "description": "Restoring functionality to most of the maps in the Kiosk Version of Donkey Kong 64.",
+    "short_description": "Restoring functionality to most of the maps in the Kiosk Version of Donkey Kong 64.",
+    "developers": [
+        "Ballaam"
+    ],
+    "other_credits": [
+        {
+            "user": "Zeldaboy",
+            "credit": "Help"
+        }
+    ],
+    "github": "https://github.com/theballaam96/kiosk-restoration-project",
+    "downloads": {
+        "v0.1": "https://github.com/theballaam96/kiosk-restoration-project"
+    },
+    "images": [
+        "blast.png"
+    ],
+    "tag_anywhere": true
+}

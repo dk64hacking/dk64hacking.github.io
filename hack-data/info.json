@@ -18,6 +18,12 @@
         "description": "A Diddy Kong Racing -esque world with a hub map, 6 car challenges, and a couple bonuses to be found. The 6th and final race is unlocked by beating the other 5."
     },
     {
+        "hack_short": "kiosk-restoration-project",
+        "hack_name": "Kiosk Restoration Project",
+        "image": "./hack-data/kiosk-restoration-project/blast.png",
+        "description": "Restoring functionality to most of the maps in the Kiosk Version of Donkey Kong 64."
+    },
+    {
         "hack_short": "kongquest",
         "hack_name": "KongQuest",
         "image": "./hack-data/kongquest/title-screen.png",
