@@ -87,7 +87,7 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                         chosen_image = images[0]
                     page.write(f"<img src=\"{fileRefToURL(chosen_image, hack)}\" id=\"main-image\">\n")
                 elif "<table id=\"hack-info\"></table>" in line:
-                    page.write("<table id=\"hack-info\" class=\"table table-striped\">\n")
+                    page.write("<table id=\"hack-info\" class=\"table table-striped mb-0\">\n")
                     # Developers
                     dev_head = "Developers"
                     if len(hack_data['developers']) == 1 and hack_data['developers'][0] != "Many": 
