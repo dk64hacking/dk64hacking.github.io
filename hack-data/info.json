@@ -6,6 +6,12 @@
         "description": "Explore the lair and first two levels of Banjo-Kazooie with the DK Crew, and collect some things along the way."
     },
     {
+        "hack_short": "randomizer",
+        "hack_name": "Donkey Kong 64 Randomizer",
+        "image": "./hack-data/randomizer/kasplat.png",
+        "description": "Change up where the loading zones take you, where moves are purchased and even the difficulty of the game!"
+    },
+    {
         "hack_short": "donkey-kong-racing",
         "hack_name": "Donkey Kong Racing",
         "image": "./hack-data/donkey-kong-racing/title-screen.png",
@@ -30,12 +36,6 @@
         "description": "Practice ROM for Donkey Kong 64 that assists with practising the game for speedrunning."
     },
     {
-        "hack_short": "randomizer",
-        "hack_name": "Donkey Kong 64 Randomizer",
-        "image": "./hack-data/randomizer/kasplat.png",
-        "description": "Change up where the loading zones take you, where moves are purchased and even the difficulty of the game!"
-    },
-    {
         "hack_short": "tag-anywhere",
         "hack_name": "Tag Anywhere",
         "image": "./hack-data/tag-anywhere/beavers.png",
@@ -45,6 +45,6 @@
         "hack_short": "vc-isles-tns",
         "hack_name": "VC Isles T&S",
         "image": "./hack-data/vc-isles-tns/vc-ts.png",
-        "description": "Wii U VC Isles T&S behavior, on not VC."
+        "description": "Wii U VC Isles T&S behavior on not VC."
     }
 ]

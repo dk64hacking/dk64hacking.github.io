@@ -3,7 +3,7 @@
     "complete": true,
     "hack_type": "utility",
     "description": "Mimics the Wii U VC behavior for Isles T&S, by bypassing instructions which *would* cause a crash on N64 hardware (Wii U VC behavior)",
-    "short_description": "Wii U VC Isles T&S behavior, on not VC.",
+    "short_description": "Wii U VC Isles T&S behavior on not VC.",
     "developers": [
         "Ballaam"
     ],

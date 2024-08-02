@@ -112,6 +112,7 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                     page.write("</table>\n")
                 else:
                     page.write(line)
+total_hack_data = sorted(total_hack_data, key=lambda x: x['hack_name'])
 with open("./hack-data/info.json", "w") as fh:
     fh.write(json.dumps(total_hack_data, indent=4))
 
