@@ -27,3 +27,27 @@
 .carousel .carousel-control-next-icon {
     filter: brightness(100%), opacity(1.0) !important;
 }
+
+.show-if-thin {
+    display: none;
+}
+
+@media only screen and (max-width: 575px) {
+    .show-if-thin {
+        display: block;
+    }
+    
+    .hide-if-thin {
+        display: none;
+    }
+}
+
+#mobile-hack-info {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+h2.show-if-thin {
+    text-align: center;
+}

@@ -18,6 +18,7 @@
         </title>
         <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
         <link href="./assets/logo.png" rel="icon"/>
+        <link href="./styles/style.css" rel="stylesheet"/>
     </head>
     <body>
         <!-- Navigation -->
@@ -87,12 +88,86 @@
                     </nav>
                 </div>
                 <div class="card p-4">
-                    <h2>
-                        Donkey Kong 64 Randomizer
-                    </h2>
                     <div class="container">
                         <div class="row">
+                            <div class="col sm-3 show-if-thin">
+                                <h2 class="show-if-thin">
+                                    Donkey Kong 64 Randomizer
+                                </h2>
+                                <div class="card" id="mobile-hack-info" style="max-width: 18rem;">
+                                    <img data-bs-target="#imageModalHero" data-bs-toggle="modal" src="./hack-data/randomizer/kasplat.png"/>
+                                    <table class="table table-striped mb-0">
+                                        <tr>
+                                            <td>
+                                                <strong>
+                                                    Developers
+                                                    <strong>
+                                                    </strong>
+                                                </strong>
+                                            </td>
+                                            <td>
+                                                Many
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>
+                                                    Type
+                                                    <strong>
+                                                    </strong>
+                                                </strong>
+                                            </td>
+                                            <td>
+                                                Gameplay
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>
+                                                    Source Code
+                                                    <strong>
+                                                    </strong>
+                                                </strong>
+                                            </td>
+                                            <td>
+                                                <a href="https://github.com/2dos/DK64-Randomizer">
+                                                    Link
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>
+                                                    Tag Anywhere
+                                                    <strong>
+                                                    </strong>
+                                                </strong>
+                                            </td>
+                                            <td>
+                                                Enabled
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>
+                                                    Download
+                                                    <strong>
+                                                    </strong>
+                                                </strong>
+                                            </td>
+                                            <td>
+                                                <a href="https://dk64randomizer.com/randomizer.html">
+                                                    Link
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                             <div class="col-sm-9">
+                                <h2 class="hide-if-thin">
+                                    Donkey Kong 64 Randomizer
+                                </h2>
                                 <div class="mb-3" id="hack-description">
                                     Experience DK64 like you never have before! Change up where the loading zones take you, where moves are purchased and even the difficulty of the game! Built-in game logic ensures every generated game is beatable and every item is reachable.
                                 </div>
@@ -166,9 +241,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-3 hide-if-thin">
                                 <div class="card" id="hack-info" style="max-width: 18rem;">
-                                    <img data-bs-target="#imageModalHero" data-bs-toggle="modal" id="main-image" src="./hack-data/randomizer/kasplat.png"/>
+                                    <img data-bs-target="#imageModalHero" data-bs-toggle="modal" src="./hack-data/randomizer/kasplat.png"/>
                                     <div aria-hidden="true" aria-labelledby="imageModalHeroLabel" class="modal fade" id="imageModalHero" tabindex="-1">
                                         <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
@@ -184,7 +259,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <table class="table table-striped mb-0" id="hack-info">
+                                    <table class="table table-striped mb-0">
                                         <tr>
                                             <td>
                                                 <strong>

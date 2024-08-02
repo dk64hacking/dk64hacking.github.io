@@ -44,8 +44,10 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                     page.write(f"<li class=\"breadcrumb-item active\" aria-current=\"page\">{hack_data['name']}</li>\n")
                 elif "<title>" in line:
                     page.write(f"\t\t<title>{hack_data['name']}</title>\n")
-                elif "<h2>Hack Name</h2>" in line:
-                    page.write(f"<h2>{hack_data['name']}</h2>\n")
+                elif "<h2 class=\"show-if-thin\">Hack Name</h2>" in line:
+                    page.write(f"<h2 class=\"show-if-thin\">{hack_data['name']}</h2>\n")
+                elif "<h2 class=\"hide-if-thin\">Hack Name</h2>" in line:
+                    page.write(f"<h2 class=\"hide-if-thin\">{hack_data['name']}</h2>\n")
                 elif "<div id=\"hack-description\"></div>" in line:
                     page.write(f"<div id=\"hack-description\" class=\"mb-3\">{hack_data['description']}</div>\n")
                     # Image Parsing
@@ -81,28 +83,29 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                             page.write(getHackInfoHTML(credit["user"], credit["credit"], False))
                         page.write("</tbody>\n")
                         page.write("</table>\n")
-                elif "<img src=\"\" id=\"main-image\">" in line:
+                elif "<img src=\"\" id=\"main-image\">" in line or "<img src=\"\" id=\"main-mobile-image\">" in line:
                     images = hack_data.get("images", [])
                     chosen_image = "./assets/logo.png"
                     if len(images) > 0:
                         chosen_image = images[0]
-                    page.write(f"<img src=\"{fileRefToURL(chosen_image, hack)}\" id=\"main-image\" data-bs-toggle=\"modal\" data-bs-target=\"#imageModalHero\">\n")
-                    page.write(f"<div class=\"modal fade\" id=\"imageModalHero\" tabindex=\"-1\" aria-labelledby=\"imageModalHeroLabel\" aria-hidden=\"true\">\n")
-                    page.write("<div class=\"modal-dialog modal-lg\">\n")
-                    page.write("<div class=\"modal-content\">\n")
-                    page.write("<div class=\"modal-header\">\n")
-                    page.write("<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n")
-                    page.write("</div>\n")
-                    page.write("<div class=\"modal-body\">\n")
-                    page.write("<div class=\"d-flex\">\n")
-                    page.write(f"<img src=\"{fileRefToURL(chosen_image, hack)}\" style=\"margin-left:auto;margin-right:auto;max-width:100%\" alt=\"{chosen_image}\">\n")
-                    page.write("</div>\n")
-                    page.write("</div>\n")
-                    page.write("</div>\n")
-                    page.write("</div>\n")
-                    page.write("</div>\n")
-                elif "<table id=\"hack-info\"></table>" in line:
-                    page.write("<table id=\"hack-info\" class=\"table table-striped mb-0\">\n")
+                    page.write(f"<img src=\"{fileRefToURL(chosen_image, hack)}\" data-bs-toggle=\"modal\" data-bs-target=\"#imageModalHero\">\n")
+                    if "<img src=\"\" id=\"main-image\">" in line:
+                        page.write(f"<div class=\"modal fade\" id=\"imageModalHero\" tabindex=\"-1\" aria-labelledby=\"imageModalHeroLabel\" aria-hidden=\"true\">\n")
+                        page.write("<div class=\"modal-dialog modal-lg\">\n")
+                        page.write("<div class=\"modal-content\">\n")
+                        page.write("<div class=\"modal-header\">\n")
+                        page.write("<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n")
+                        page.write("</div>\n")
+                        page.write("<div class=\"modal-body\">\n")
+                        page.write("<div class=\"d-flex\">\n")
+                        page.write(f"<img src=\"{fileRefToURL(chosen_image, hack)}\" style=\"margin-left:auto;margin-right:auto;max-width:100%\" alt=\"{chosen_image}\">\n")
+                        page.write("</div>\n")
+                        page.write("</div>\n")
+                        page.write("</div>\n")
+                        page.write("</div>\n")
+                        page.write("</div>\n")
+                elif "<table id=\"hack-info\"></table>" in line or "<table id=\"mobile-hack-info\"></table>" in line:
+                    page.write("<table class=\"table table-striped mb-0\">\n")
                     # Developers
                     dev_head = "Developers"
                     if len(hack_data['developers']) == 1 and hack_data['developers'][0] != "Many": 

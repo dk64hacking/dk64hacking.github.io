@@ -2,7 +2,7 @@
     "name": "Kiosk Restoration Project",
     "complete": false,
     "hack_type": "utility",
-    "description": "Restoring functionality to most of the maps in the Kiosk Version of Donkey Kong 64.",
+    "description": "Restoring functionality to most of the maps in the Kiosk Version of Donkey Kong 64 by pulling assets from the US Release ROM and putting them into the Kiosk ROM.",
     "short_description": "Restoring functionality to most of the maps in the Kiosk Version of Donkey Kong 64.",
     "developers": [
         "Ballaam"
@@ -18,7 +18,11 @@
         "v0.1": "https://github.com/theballaam96/kiosk-restoration-project"
     },
     "images": [
-        "blast.png"
+        "blast.png",
+        "grape-switches.png",
+        "galleon-plank.png",
+        "free-lanky.png",
+        "lanky-gb.png"
     ],
     "tag_anywhere": true
 }
