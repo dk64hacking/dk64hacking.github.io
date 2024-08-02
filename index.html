@@ -7,7 +7,7 @@
         <meta name="keywords" content="Donkey Kong 64, DK64, ROM Hacking, N64, Nintendo 64" />
         <meta name="author" content="DK64 ROM Hacking Crew" />
         <!-- Discord -->
-        <meta content="Hacking Hub" property="og:title" />
+        <meta content="Homepage" property="og:title" />
         <meta content="Welcome to the DK64 Hacking Page. A comprehensive repository on all things DK64 ROM Hacking." property="og:description" />
         <meta content="Donkey Kong 64 Hacking" property="og:site_name" />
         <meta content="https://raw.githubusercontent.com/dk64hacking/dk64hacking.github.io/main/assets/logo.png" property="og:image" />
@@ -58,7 +58,7 @@
         <div class="container pt-4" style="min-width:650px">
             <div class="col">
                 <div class="card p-2">
-                    <div class="d-flex flex-wrap" id="card-list"></div>
+                    <div class="d-flex flex-wrap justify-content-center" id="card-list"></div>
                 </div>
             </div>
         </div>
@@ -87,6 +87,12 @@
                     "img": "./assets/f3dex2.png",
                     "url": "https://hack64.net/wiki/doku.php?id=f3dex2",
                     "description": "Documentation on the graphical opcode used for rendering Donkey Kong 64, amongst other games."
+                },
+                {
+                    "name": "Custom Map Tutorial",
+                    "img": "./assets/map_edit_tut.png",
+                    "url": "https://www.youtube.com/watch?v=npPWFg_zMoU",
+                    "description": "Tutorial from GloriousLiar on how to create custom maps in Donkey Kong 64."
                 },
             ];
             document.getElementById("card-list").innerHTML = cards.map(item => `
