@@ -1,5 +1,6 @@
 import os
 import json
+from bs4 import BeautifulSoup
 
 def fileRefToURL(file_ref: str, hack_name: str) -> str:
     """Converts a file reference to a url."""
@@ -85,7 +86,21 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                     chosen_image = "./assets/logo.png"
                     if len(images) > 0:
                         chosen_image = images[0]
-                    page.write(f"<img src=\"{fileRefToURL(chosen_image, hack)}\" id=\"main-image\">\n")
+                    page.write(f"<img src=\"{fileRefToURL(chosen_image, hack)}\" id=\"main-image\" data-bs-toggle=\"modal\" data-bs-target=\"#imageModalHero\">\n")
+                    page.write(f"<div class=\"modal fade\" id=\"imageModalHero\" tabindex=\"-1\" aria-labelledby=\"imageModalHeroLabel\" aria-hidden=\"true\">\n")
+                    page.write("<div class=\"modal-dialog modal-lg\">\n")
+                    page.write("<div class=\"modal-content\">\n")
+                    page.write("<div class=\"modal-header\">\n")
+                    page.write("<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n")
+                    page.write("</div>\n")
+                    page.write("<div class=\"modal-body\">\n")
+                    page.write("<div class=\"d-flex\">\n")
+                    page.write(f"<img src=\"{fileRefToURL(chosen_image, hack)}\" style=\"margin-left:auto;margin-right:auto;max-width:100%\" alt=\"{chosen_image}\">\n")
+                    page.write("</div>\n")
+                    page.write("</div>\n")
+                    page.write("</div>\n")
+                    page.write("</div>\n")
+                    page.write("</div>\n")
                 elif "<table id=\"hack-info\"></table>" in line:
                     page.write("<table id=\"hack-info\" class=\"table table-striped mb-0\">\n")
                     # Developers
@@ -112,6 +127,12 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                     page.write("</table>\n")
                 else:
                     page.write(line)
+    txt = None
+    with open(f"{hack}.html", "r") as page:
+        txt = page.read()
+    txt = BeautifulSoup(txt, "html.parser").prettify()
+    with open(f"{hack}.html", "w") as page:
+        page.write(txt)
 total_hack_data = sorted(total_hack_data, key=lambda x: x['hack_name'])
 with open("./hack-data/info.json", "w") as fh:
     fh.write(json.dumps(total_hack_data, indent=4))
