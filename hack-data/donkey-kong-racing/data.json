@@ -1,0 +1,43 @@
+{
+    "name": "Donkey Kong Racing",
+    "complete": true,
+    "hack_type": "gameplay",
+    "description": "This is a romhack for Donkey Kong 64 featuring heavily the car race mechanic from Tiny’s Car Race in Creepy Castle; a Diddy Kong Racing -esque world with a hub map, 6 car challenges, and a couple bonuses to be found. The 6th and final race is unlocked by beating the other 5. Upon completion, you will see totals and credits in the treehouse. Enable Pure Interpreter if running on an emulator.",
+    "short_description": "A Diddy Kong Racing -esque world with a hub map, 6 car challenges, and a couple bonuses to be found. The 6th and final race is unlocked by beating the other 5.", 
+    "developers": [
+        "GloriousLiar"
+    ],
+    "other_credits": [
+        {
+            "user": "Bismuth",
+            "credit": "Music"
+        },
+        {
+            "user": "Isotarge",
+            "credit": "Help"
+        },
+        {
+            "user": "Ballaam",
+            "credit": "Help"
+        },
+        {
+            "user": "2dos",
+            "credit": "Help"
+        },
+        {
+            "user": "TJ",
+            "credit": "Help"
+        }
+    ],
+    "downloads": {
+        "v1.0": "dkr-v1.bps"
+    },
+    "images": [
+        "title-screen.png",
+        "galleon-blast.png",
+        "castle-blast.png",
+        "tt.png",
+        "caves-blast.png"
+    ],
+    "tag_anywhere": false
+}

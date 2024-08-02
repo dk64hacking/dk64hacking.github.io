@@ -1,0 +1,24 @@
+{
+    "name": "Donkey Kong 64 Randomizer",
+    "complete": true,
+    "hack_type": "gameplay",
+    "description": "Experience DK64 like you never have before! Change up where the loading zones take you, where moves are purchased and even the difficulty of the game! Built-in game logic ensures every generated game is beatable and every item is reachable.",
+    "short_description": "Change up where the loading zones take you, where moves are purchased and even the difficulty of the game!",
+    "developers": [
+        "Many"
+    ],
+    "other_credits": [],
+    "github": "https://github.com/2dos/DK64-Randomizer",
+    "downloads": {
+        "v4.0": "https://dev.dk64randomizer.com/randomizer.html",
+        "v3.0": "https://dk64randomizer.com/randomizer.html"
+    },
+    "images": [
+        "kasplat.png",
+        "instrument-boss.png",
+        "fungi.png",
+        "double-kasplat.png",
+        "portal.png"
+    ],
+    "tag_anywhere": true
+}

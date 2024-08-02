@@ -1,0 +1,23 @@
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white !important;
+    border-radius: 5px;
+}
+
+.carousel-max-image img {
+    max-height: 70vh;
+    width: 100%;
+    object-fit:cover;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel .carousel-control-prev-icon {
+    filter: brightness(100%), opacity(1.0) !important;
+}
+
+.carousel .carousel-control-next-icon {
+    filter: brightness(100%), opacity(1.0) !important;
+}

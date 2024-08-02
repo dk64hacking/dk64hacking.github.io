@@ -1,0 +1,23 @@
+{
+    "name": "OK Edition",
+    "complete": true,
+    "hack_type": "gameplay",
+    "description": "In this Rom hack, unlike Vanilla DK64, you begin the game with Lanky Kong. It is highly recommended that you are familiar with glitches in the base game, as you will have a difficult time completing the game without them.",
+    "short_description": "Begin the game with Lanky Kong",
+    "developers": [
+        "Grog"
+    ],
+    "other_credits": [
+        {
+            "user": "Ballaam",
+            "credit": "Hacking"
+        }
+    ],
+    "downloads": {
+        "v1.0": "okedition-v1.bps"
+    },
+    "images": [
+        "training-grounds.png"
+    ],
+    "tag_anywhere": false
+}

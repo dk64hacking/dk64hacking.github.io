@@ -1,0 +1,44 @@
+[
+    {
+        "hack_short": "banjo-kongzooie",
+        "hack_name": "Banjo-Kongzooie",
+        "image": "./hack-data/banjo-kongzooie/spiral.png",
+        "description": "Explore the lair and first two levels of Banjo-Kazooie with the DK Crew, and collect some things along the way."
+    },
+    {
+        "hack_short": "donkey-kong-racing",
+        "hack_name": "Donkey Kong Racing",
+        "image": "./hack-data/donkey-kong-racing/title-screen.png",
+        "description": "A Diddy Kong Racing -esque world with a hub map, 6 car challenges, and a couple bonuses to be found. The 6th and final race is unlocked by beating the other 5."
+    },
+    {
+        "hack_short": "kongquest",
+        "hack_name": "KongQuest",
+        "image": "./hack-data/kongquest/title-screen.png",
+        "description": "A linear hack with 5 levels, tonnes of platform challenges and barrels of fun."
+    },
+    {
+        "hack_short": "ok-edition",
+        "hack_name": "OK Edition",
+        "image": "./hack-data/ok-edition/training-grounds.png",
+        "description": "Begin the game with Lanky Kong"
+    },
+    {
+        "hack_short": "practice-rom",
+        "hack_name": "Practice ROM",
+        "image": "./hack-data/practice-rom/rap.png",
+        "description": "Practice ROM for Donkey Kong 64 that assists with practising the game for speedrunning."
+    },
+    {
+        "hack_short": "randomizer",
+        "hack_name": "Donkey Kong 64 Randomizer",
+        "image": "./hack-data/randomizer/kasplat.png",
+        "description": "Change up where the loading zones take you, where moves are purchased and even the difficulty of the game!"
+    },
+    {
+        "hack_short": "tag-anywhere",
+        "hack_name": "Tag Anywhere",
+        "image": "./hack-data/tag-anywhere/beavers.png",
+        "description": "Use D-Pad Left/Right to instantly tag to the previous/next Kong in the rotation."
+    }
+]

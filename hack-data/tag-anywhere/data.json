@@ -1,0 +1,32 @@
+{
+    "name": "Tag Anywhere",
+    "complete": true,
+    "hack_type": "improvement",
+    "description": "This patch lets you use D-Pad Left/Right to instantly tag to the previous/next Kong in the rotation. The mystery menu options are unlocked without capturing banana fairies for your convenience. Made with love by Isotarge, with help from the DK64 crew.",
+    "short_description": "Use D-Pad Left/Right to instantly tag to the previous/next Kong in the rotation.",
+    "developers": [
+        "Isotarge"
+    ],
+    "other_credits": [
+        {
+            "user": "Ballaam",
+            "credit": "Tag Anywhere Implementation"
+        },
+        {
+            "user": "Kaze Emanuar",
+            "credit": "Tag Anywhere Implementation"
+        },
+        {
+            "user": "runehero123",
+            "credit": "ROM Map"
+        }
+    ],
+    "github": "https://github.com/Isotarge/dk64-tag-anywhere",
+    "downloads": {
+        "v5.0": "https://github.com/Isotarge/dk64-tag-anywhere/releases/download/v5/Donkey.Kong.64.-.Tag.Anywhere.V5.U.bps"
+    },
+    "images": [
+        "beavers.png"
+    ],
+    "tag_anywhere": true
+}

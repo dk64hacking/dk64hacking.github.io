@@ -1,0 +1,48 @@
+{
+    "name": "KongQuest",
+    "complete": true,
+    "hack_type": "gameplay",
+    "description": "DK64 KongQuest is a first of its kind hack for DK64. By modifying the level's setup files (for object placement within levels) in the ROM, and stitching them together with some assembly code, this is a linear hack with 5 levels.",
+    "short_description": "A linear hack with 5 levels, tonnes of platform challenges and barrels of fun.",
+    "developers": [
+        "GloriousLiar"
+    ],
+    "other_credits": [
+        {
+            "user": "Bismuth",
+            "credit": "Music"
+        },
+        {
+            "user": "Isotarge",
+            "credit": "Scripthawk object analysis, and general help with assembly"
+        },
+        {
+            "user": "Ballaam",
+            "credit": "Object analysis tools, setup file help, and more"
+        },
+        {
+            "user": "2dos",
+            "credit": "Promotion"
+        },
+        {
+            "user": "Mittenz",
+            "credit": "Assembly help"
+        },
+        {
+            "user": "TJ",
+            "credit": "Testing and encouragement"
+        }
+    ],
+    "github": "https://github.com/GloriousLiar/KongQuest",
+    "downloads": {
+        "v1.0": "kongquest-v1.bps"
+    },
+    "images": [
+        "title-screen.png",
+        "caves-lobby.png",
+        "japes-mountain.png",
+        "factory.png",
+        "training-grounds.png"
+    ],
+    "tag_anywhere": false
+}

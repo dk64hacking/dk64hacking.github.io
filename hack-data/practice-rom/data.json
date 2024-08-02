@@ -1,0 +1,26 @@
+{
+    "name": "Practice ROM",
+    "complete": true,
+    "hack_type": "utility",
+    "description": "Practice ROM for Donkey Kong 64 that assists with practising the game for speedrunning.",
+    "short_description": "Practice ROM for Donkey Kong 64 that assists with practising the game for speedrunning.",
+    "developers": [
+        "Ballaam"
+    ],
+    "other_credits": [
+        {
+            "user": "Isotarge",
+            "credit": "Scripthawk"
+        }
+    ],
+    "github": "https://github.com/theballaam96/dk64-practice-rom",
+    "downloads": {
+        "v1.4.2": "https://github.com/theballaam96/dk64-practice-rom/raw/main/Site/releases/Practice%20ROM%201_4_2_US.bps",
+        "v1.4.1": "https://github.com/theballaam96/dk64-practice-rom/raw/main/Site/releases/Practice%20ROM%201_4_1.bps",
+        "v1.4.0": "https://github.com/theballaam96/dk64-practice-rom/raw/main/Site/releases/Practice%20ROM%201_4.bps"
+    },
+    "images": [
+        "rap.png"
+    ],
+    "tag_anywhere": true
+}

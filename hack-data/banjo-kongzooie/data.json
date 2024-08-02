@@ -1,0 +1,31 @@
+{
+    "name": "Banjo-Kongzooie",
+    "complete": true,
+    "hack_type": "gameplay",
+    "description": "The first DK64 Romhack to use custom textured maps, among other new technical innovations. Explore the lair and first two levels of Banjo-Kazooie with the DK Crew, and collect some things along the way.",
+    "short_description": "Explore the lair and first two levels of Banjo-Kazooie with the DK Crew, and collect some things along the way.",
+    "developers": [
+        "GloriousLiar"
+    ],
+    "other_credits": [
+        {
+            "user": "Bismuth",
+            "credit": "Music"
+        },
+        {
+            "user": "Ballaam",
+            "credit": "Help"
+        }
+    ],
+    "github": "https://github.com/GloriousLiar/Banjo-Kongzooie",
+    "downloads": {
+        "v1.2": "https://github.com/GloriousLiar/Banjo-Kongzooie/releases/download/v1.2/Banjo-Kongzooie.v1.2.bps",
+        "v1.1": "https://github.com/GloriousLiar/Banjo-Kongzooie/releases/download/v1.1/Banjo-Kongzooie.v1.1.bps",
+        "v1.0": "https://github.com/GloriousLiar/Banjo-Kongzooie/releases/download/v1.0/Banjo-Kongzooie-v1.0.bps"
+    },
+    "images": [
+        "spiral.png",
+        "mumbos.png"
+    ],
+    "tag_anywhere": true
+}
