@@ -7,11 +7,12 @@ def fileRefToURL(file_ref: str, hack_name: str) -> str:
         return file_ref
     return f"./hack-data/{hack_name}/{file_ref}"
 
-def getHackInfoHTML(head: str, value: str) -> str:
+def getHackInfoHTML(head: str, value: str, have_strong_head: bool=True, have_strong_value: bool=False, is_table_head: bool=False) -> str:
+    cell_text = "th" if is_table_head else "td"
     lines = [
         "<tr>",
-        f"<td><strong>{head}<strong></td>",
-        f"<td>{value}</td>",
+        f"<{cell_text}>{'<strong>' if have_strong_head else ''}{head}{'<strong>' if have_strong_head else ''}</{cell_text}>",
+        f"<{cell_text}>{'<strong>' if have_strong_value else ''}{value}{'<strong>' if have_strong_value else ''}</{cell_text}>",
         "</tr>"
     ]
     return "".join([f"{x}\n" for x in lines])
@@ -45,7 +46,40 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                 elif "<h2>Hack Name</h2>" in line:
                     page.write(f"<h2>{hack_data['name']}</h2>\n")
                 elif "<div id=\"hack-description\"></div>" in line:
-                    page.write(f"<div id=\"hack-description\">{hack_data['description']}</div>\n")
+                    page.write(f"<div id=\"hack-description\" class=\"mb-3\">{hack_data['description']}</div>\n")
+                    # Image Parsing
+                    if len(hack_data.get("images", [])) > 1:
+                        page.write("<h3>Images</h3>\n")
+                        page.write("<div class=\"d-flex flex-wrap mb-3\">\n")
+                        for index, img in enumerate(hack_data["images"][1:]):
+                            page.write(f"<img src=\"{fileRefToURL(img, hack)}\" width=\"200px\" class=\"pe-2 pb-2\" alt=\"{img}\" data-bs-toggle=\"modal\" data-bs-target=\"#imageModal{index}\">\n")
+                            page.write(f"<div class=\"modal fade\" id=\"imageModal{index}\" tabindex=\"-1\" aria-labelledby=\"imageModal{index}Label\" aria-hidden=\"true\">\n")
+                            page.write("<div class=\"modal-dialog modal-lg\">\n")
+                            page.write("<div class=\"modal-content\">\n")
+                            page.write("<div class=\"modal-header\">\n")
+                            page.write("<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n")
+                            page.write("</div>\n")
+                            page.write("<div class=\"modal-body\">\n")
+                            page.write("<div class=\"d-flex\">\n")
+                            page.write(f"<img src=\"{fileRefToURL(img, hack)}\" style=\"margin-left:auto;margin-right:auto;max-width:100%\" alt=\"{img}\">\n")
+                            page.write("</div>\n")
+                            page.write("</div>\n")
+                            page.write("</div>\n")
+                            page.write("</div>\n")
+                            page.write("</div>\n")
+                        page.write("</div>")
+                    # Credit Parsing
+                    if len(hack_data.get("other_credits", [])) > 0:
+                        page.write("<h3>Credits</h3>\n")
+                        page.write("<table class=\"table table-striped table-hover\">\n")
+                        page.write("<thead>\n")
+                        page.write(getHackInfoHTML("User", "Contribution", True, True))
+                        page.write("</thead>\n")
+                        page.write("<tbody>\n")
+                        for credit in hack_data["other_credits"]:
+                            page.write(getHackInfoHTML(credit["user"], credit["credit"], False))
+                        page.write("</tbody>\n")
+                        page.write("</table>\n")
                 elif "<img src=\"\" id=\"main-image\">" in line:
                     images = hack_data.get("images", [])
                     chosen_image = "./assets/logo.png"
@@ -53,7 +87,7 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                         chosen_image = images[0]
                     page.write(f"<img src=\"{fileRefToURL(chosen_image, hack)}\" id=\"main-image\">\n")
                 elif "<table id=\"hack-info\"></table>" in line:
-                    page.write("<table id=\"hack-info\" class=\"table\">\n")
+                    page.write("<table id=\"hack-info\" class=\"table table-striped\">\n")
                     # Developers
                     dev_head = "Developers"
                     if len(hack_data['developers']) == 1 and hack_data['developers'][0] != "Many": 
@@ -66,6 +100,15 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
                         page.write(getHackInfoHTML("Source Code", f"<a href=\"{hack_data['github']}\">Link</a>"))
                     # Tag Anywhere
                     page.write(getHackInfoHTML("Tag Anywhere", "Enabled" if hack_data.get("tag_anywhere", False) else "Disabled"))
+                    # Download
+                    if hack == "randomizer":
+                        # For now, always link to the stable version
+                        primary_download = "https://dk64randomizer.com/randomizer.html"
+                    else:
+                        primary_version = list(hack_data['downloads'])[0]
+                        primary_download = fileRefToURL(hack_data['downloads'][primary_version], hack)
+                    page.write(getHackInfoHTML("Download", f"<a href=\"{primary_download}\">Link</a>"))
+                    # End
                     page.write("</table>\n")
                 else:
                     page.write(line)
