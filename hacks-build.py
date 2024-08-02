@@ -1,6 +1,6 @@
 import os
 import json
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, formatter
 
 def fileRefToURL(file_ref: str, hack_name: str) -> str:
     """Converts a file reference to a url."""
@@ -130,7 +130,8 @@ for hack in [x for x in os.listdir("./hack-data") if x != "info.json"]:
     txt = None
     with open(f"{hack}.html", "r") as page:
         txt = page.read()
-    txt = BeautifulSoup(txt, "html.parser").prettify()
+    fmt = formatter.HTMLFormatter(indent=4)
+    txt = BeautifulSoup(txt, "html.parser").prettify(formatter=fmt)
     with open(f"{hack}.html", "w") as page:
         page.write(txt)
 total_hack_data = sorted(total_hack_data, key=lambda x: x['hack_name'])
