@@ -7,7 +7,7 @@
     },
     {
         "hack_short": "randomizer",
-        "hack_name": "Donkey Kong 64 Randomizer",
+        "hack_name": "DK64 Randomizer",
         "image": "./hack-data/randomizer/kasplat.png",
         "description": "Change up where the loading zones take you, where moves are purchased and even the difficulty of the game!"
     },
