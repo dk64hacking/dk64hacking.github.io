@@ -94,12 +94,18 @@
                     "url": "https://www.youtube.com/watch?v=npPWFg_zMoU",
                     "description": "Tutorial from GloriousLiar on how to create custom maps in Donkey Kong 64."
                 },
-                //{
-                //    "name": "Custom Map Tutorial",
-                //    "img": "./assets/map_edit_tut.png",
-                //    "url": "https://www.youtube.com/watch?v=npPWFg_zMoU",
-                //    "description": "Tutorial from GloriousLiar on how to create custom maps in Donkey Kong 64."
-                //},
+                {
+                    "name": "Ghidra Setup",
+                    "img": "./assets/ghidra.png",
+                    "url": "./ghidra.html",
+                    "description": "A simple way to view a close interpretation of the game's code."
+                },
+                {
+                    "name": "Decomp Project",
+                    "img": "https://gitlab.com/uploads/-/system/user/avatar/8469756/avatar.png?width=192",
+                    "url": "https://gitlab.com/dk64_decomp/dk64",
+                    "description": "Currently incomplete, but a more accurate version of the output from Ghidra."
+                },
             ];
             document.getElementById("card-list").innerHTML = cards.map(item => `
                 <div class="card m-2" style="width: 18rem;">
