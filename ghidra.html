@@ -105,27 +105,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            fetch("./hack-data/info.json").then(resp => {
-                return resp.json()
-            }).then(data => {
-                document.getElementById("card-list").innerHTML = data.map(item => `
-                <div class="card m-2" style="width: 18rem;">
-                    <a href="./${item.hack_short}.html">
-                        <div class="card-img-container">
-                            <img src="${item.image}" class="card-img-top" alt="${item.hack_name}">
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <a href="./${item.hack_short}.html">
-                            <h5 class="card-title">${item.hack_name}</h5>
-                        </a>
-                        <p class="card-text">${item.description}</p>
-                    </div>
-                </div>
-            `).join("");
-            })
-        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
