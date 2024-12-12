@@ -30,6 +30,12 @@
         "description": "A linear hack with 5 levels, tonnes of platform challenges and barrels of fun."
     },
     {
+        "hack_short": "music-test-hack",
+        "hack_name": "Music Test Hack",
+        "image": "./hack-data/music-test-hack/ui.png",
+        "description": "Utility hack for testing musical compositions in a speedy fashion."
+    },
+    {
         "hack_short": "ok-edition",
         "hack_name": "OK Edition",
         "image": "./hack-data/ok-edition/training-grounds.png",
