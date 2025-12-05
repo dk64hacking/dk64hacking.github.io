@@ -12,6 +12,12 @@
         "description": "Change up where the loading zones take you, where moves are purchased and even the difficulty of the game!"
     },
     {
+        "hack_short": "size-mod",
+        "hack_name": "DK64 but you grow in size the more bananas you have",
+        "image": "./hack-data/size-mod/bigdiddy.png",
+        "description": "The more bananas you have for a level, the bigger the kong."
+    },
+    {
         "hack_short": "donkey-kong-racing",
         "hack_name": "Donkey Kong Racing",
         "image": "./hack-data/donkey-kong-racing/title-screen.png",

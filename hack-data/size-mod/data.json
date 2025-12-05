@@ -1,0 +1,22 @@
+{
+    "name": "DK64 but you grow in size the more bananas you have",
+    "complete": true,
+    "hack_type": "gameplay",
+    "description": "Starting at 20% size, your kong grows at a linear rate depending on how many bananas are in your inventory for the level you're in. The boss and B. Locker requirements have been halved, along with the coin door being pre-opened to enable a faster game experience.",
+    "short_description": "The more bananas you have for a level, the bigger the kong.",
+    "developers": [
+        "Ballaam"
+    ],
+    "other_credits": [],
+    "github": "https://github.com/theballaam96/mini-dk64",
+    "downloads": {
+        "v1.0": "dk64-mini-v1.bps"
+    },
+    "images": [
+        "bigdiddy.png",
+        "trappedlanky.png",
+        "dktv.png",
+        "tagbarrel.png"
+    ],
+    "tag_anywhere": true
+}
